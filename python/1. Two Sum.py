@@ -11,10 +11,10 @@ Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
-        pverMap = {}
+        prevMap = {}
 
         for i, n in enumerate(nums):
-            diff = arget - n
+            diff = target - n
             if diff in prevMap:
                 return [prevMap[diff], i]
             prevMap[n] = i
